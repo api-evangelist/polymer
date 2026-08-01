@@ -1,0 +1,53 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.polymersearch.com/
+api: Polymer Embedded Analytics API
+name: Polymer Embeddable Components
+summary: >-
+  Polymer is an embedded-analytics product; its primary client-side surface is
+  the embeddable board (dashboard) rendered via a tokenized embed URL, plus the
+  library of visualization block types that compose a board. These are distinct
+  from an SDK: they are hosted, prebuilt UI surfaces embedded via URL/iframe.
+families:
+- name: Embedded Board
+  kind: hosted-embed
+  description: >-
+    A full Polymer dashboard embedded into a host application via an iframe/URL.
+  loader:
+    embed_url: https://v3.polymersearch.com/b/{board_id}?ptoken={token}
+    token_endpoint: GET /v1/auth/token
+  permission_levels:
+  - board_read_only
+  - board_edit
+  - workspace_read_only
+  - workspace_edit
+  - block_level_read_only
+- name: Visualization Blocks
+  kind: block-library
+  description: >-
+    Prebuilt visualization block types that compose a board and render inside the
+    embedded experience.
+  block_types:
+  - Header
+  - Bar
+  - Column
+  - Scatter
+  - Timeseries
+  - Heatmap
+  - Lineplot
+  - Pie
+  - Outlier
+  - ROI
+  - Pivot
+  - KPI
+  - Data Table
+  - Gallery
+  - Rich Text
+  - Image
+  - Map
+  - Loom
+customization:
+  white_label: true
+  notes: >-
+    Boards support white-labeling, advanced sharing controls, custom DNS, and
+    background color customization (per changelog).

@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.polymersearch.com/
+api: Polymer Embedded Analytics API
+name: Polymer API Lifecycle
+summary: >-
+  Lifecycle posture for the Polymer embedded analytics API. Versioning is in the
+  URI path (v1). The current generation is the "V3" APIs first released January
+  2023. A public status page is operated. No formal deprecation/sunset policy or
+  SLA is published in the developer docs.
+versioning:
+  style: uri-path
+  current: v1
+  first_release: '2021-07-21'
+  v3_generation_since: '2023-01-06'
+status_page:
+  url: https://status.polymersearch.com
+  present: true
+deprecation:
+  policy_published: false
+  sunset_headers: unknown
+  deprecation_headers: unknown
+  notes: >-
+    No RFC 8594 Sunset/Deprecation header policy or dated deprecation schedule is
+    documented. The changelog is additive and shows no removed endpoints.
+sla:
+  published: false
+support:
+  help_center: https://polymersearch.notion.site/Help-Center-1b21de28d1504770bf79beaeb2610bc1
+  contact: contact@polymersearch.com
+changelog:
+  artifact: changelog/polymer-changelog.yml
+  docs: https://apidocs.polymersearch.com/

@@ -1,0 +1,65 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.polymersearch.com/
+api: Polymer Embedded Analytics API
+name: Polymer API Conventions
+summary: >-
+  Cross-cutting runtime semantics for the Polymer embedded analytics REST API:
+  API-key auth, workspace scoping, page/per_page pagination, hourly rate limits
+  with standard signaling headers, and JSON request/response bodies.
+base_url: https://v3.polymersearch.com/api
+version_style:
+  scheme: uri-path
+  current: v1
+  notes: >-
+    Resource paths are versioned in the URI (for example /v1/board, /v1/dataset).
+    The application host is v3.polymersearch.com; the "V3" APIs are the current
+    generation referenced throughout the changelog.
+authentication:
+  style: api_key
+  transports:
+  - header X-API-KEY
+  - query api_key
+  see: authentication/polymer-authentication.yml
+workspace_scoping:
+  header: workspace-id
+  description: >-
+    Optional workspace-id header selects a non-default workspace for the request.
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency key mechanism is documented. Write operations (POST/PUT/DELETE)
+    are not documented as idempotent.
+pagination:
+  style: page-number
+  params:
+  - name: page
+    description: 1-indexed page number.
+  - name: per_page
+    description: Number of items per page.
+  applies_to: All list endpoints.
+rate_limiting:
+  limit: 100 requests per hour per API key
+  exceeded_status: 429
+  headers:
+  - X-RateLimit-Limit
+  - X-RateLimit-Remaining
+  - X-RateLimit-Reset
+media_types:
+  request: application/json (multipart/form-data for dataset/file uploads)
+  response: application/json
+error_envelope:
+  format: http-status
+  notes: >-
+    Errors are signaled with standard HTTP status codes (400, 401, 404, 405,
+    429, 500, 503). See errors/polymer-problem-types.yml. No RFC 9457
+    problem+json envelope is documented.
+task_model:
+  description: >-
+    Long-running operations (for example dataset imports/syncs) return a task
+    that is polled via GET /v1/task/:id for status.
+cross_links:
+  errors: errors/polymer-problem-types.yml
+  lifecycle: lifecycle/polymer-lifecycle.yml
+  authentication: authentication/polymer-authentication.yml
+  data_model: data-model/polymer-data-model.yml

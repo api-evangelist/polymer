@@ -1,0 +1,80 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.polymersearch.com/
+api: Polymer Embedded Analytics API
+name: Polymer Data Model
+summary: >-
+  Entity-relationship model for the Polymer embedded analytics API, derived from
+  the documented object fields and endpoints. A Workspace is the top-level
+  tenant; it owns Users, Sources, Datasets, and Boards. Datasets are produced by
+  Sources or uploads; Boards are composed of visualization Blocks and reference
+  Datasets. Embed tokens grant scoped access to Boards or Workspaces.
+entities:
+- name: Workspace
+  id_field: _id
+  fields: [_id, name, slug, default, members, settings, user_role]
+  relationships:
+  - has_many: User
+    via: members
+  - has_many: Source
+    via: workspace_id
+  - has_many: Dataset
+    via: workspace_id
+  - has_many: Board
+    via: workspace_id
+- name: User
+  description: A member of a workspace (organization user).
+  relationships:
+  - belongs_to: Workspace
+    via: workspace membership
+- name: Source
+  id_field: _id
+  fields: [_id, type, name, created_at, updated_at]
+  description: A connected data source such as Snowflake, BigQuery, or an upload.
+  relationships:
+  - belongs_to: Workspace
+    via: workspace_id
+  - has_many: Dataset
+    via: source_type
+- name: Dataset
+  id_field: _id
+  fields: [_id, name, description, source_type, workspace_id, created_at, extension, num_rows, status, user, user_email]
+  relationships:
+  - belongs_to: Workspace
+    via: workspace_id
+  - belongs_to: Source
+    via: source_type
+  - has_many: Board
+    via: file_ids (referenced by boards)
+- name: Board
+  id_field: _id
+  fields: [_id, name, description, file_id, sharing, created_at, updated_at, uid, user_id, blocks, advanced_sharing]
+  description: A dashboard composed of visualization blocks that references one or more datasets.
+  relationships:
+  - belongs_to: Workspace
+    via: workspace_id
+  - has_many: Dataset
+    via: file_ids
+  - has_many: Block
+    via: blocks
+- name: Block
+  description: >-
+    A visualization unit within a board. Types include Header, Bar, Column,
+    Scatter, Timeseries, Heatmap, Lineplot, Pie, Outlier, ROI, Pivot, KPI,
+    Data Table, Gallery, Rich Text, Image, Map, Loom.
+  relationships:
+  - belongs_to: Board
+    via: blocks
+- name: Task
+  id_field: _id
+  description: An async job (for example dataset import/sync) polled via GET /v1/task/:id.
+- name: EmbedToken
+  description: >-
+    Short-lived token minted via GET /v1/auth/token granting scoped access to a
+    board or workspace (permission levels board_read_only, board_edit,
+    workspace_read_only, workspace_edit, block_level_read_only).
+  relationships:
+  - belongs_to: Board
+    via: board_id
+  - belongs_to: Workspace
+    via: workspace scope

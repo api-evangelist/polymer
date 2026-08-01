@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: derived
+source: https://apidocs.polymersearch.com/
+api: Polymer Embedded Analytics API
+name: Polymer Error Catalog
+format: http-status
+summary: >-
+  Polymer signals errors with standard HTTP status codes and JSON bodies. No
+  RFC 9457 application/problem+json envelope or machine-readable error-code
+  vocabulary is documented; this catalog is derived from the documented status
+  codes and rate-limit behavior.
+problem_types:
+- status: 400
+  title: Bad Request
+  meaning: The request was malformed or a parameter was invalid.
+- status: 401
+  title: Unauthorized
+  meaning: Missing or invalid API key.
+- status: 404
+  title: Not Found
+  meaning: The requested resource (workspace, dataset, board, source) does not exist or is not accessible to the key.
+- status: 405
+  title: Method Not Allowed
+  meaning: The HTTP method is not supported for this endpoint.
+- status: 429
+  title: Too Many Requests
+  meaning: >-
+    The API key exceeded its rate limit of 100 requests/hour. Inspect
+    X-RateLimit-Reset to know when to retry.
+- status: 500
+  title: Internal Server Error
+  meaning: An unexpected server-side error occurred.
+- status: 503
+  title: Service Unavailable
+  meaning: The service is temporarily unavailable; retry later.

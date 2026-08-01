@@ -1,27 +1,137 @@
 aid: polymer
 name: Polymer
-description: Polymer is a company surfaced as a portfolio company of 500-global, sierra-ventures and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Polymer (Polymer Search) is an AI-driven embedded analytics and business
+  intelligence platform that lets teams and product developers turn raw
+  spreadsheet, database, and SaaS data into interactive dashboards, charts,
+  and visualizations without a data analyst. Its REST API lets developers
+  create workspaces, connect data sources (Snowflake, BigQuery, CSV/JSON
+  uploads), build boards composed of visualization blocks, and embed
+  white-labeled, permission-scoped dashboards directly into their own
+  applications with a few lines of code. Authentication is via API key, with
+  short-lived embed tokens for end-user access. Polymer is backed by Sierra
+  Ventures and 500 Global.
 url: https://raw.githubusercontent.com/api-evangelist/polymer/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
 - sierra-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-live-docs
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://www.polymersearch.com/favicon.ico
 tags:
 - Company
-apis: []
+- Analytics
+- Business Intelligence
+- Data Visualization
+- Embedded Analytics
+- Dashboards
+- Data
+- AI
+apis:
+- name: Polymer Embedded Analytics API
+  description: >-
+    REST API for the Polymer embedded analytics platform. Manage workspaces
+    and users, connect and sync data sources (Snowflake, BigQuery, uploads),
+    create and update datasets, compose boards from visualization blocks, and
+    mint embed tokens to render permission-scoped dashboards inside your own
+    application.
+  humanURL: https://apidocs.polymersearch.com/
+  baseURL: https://v3.polymersearch.com/api
+  tags:
+  - Analytics
+  - Embedded Analytics
+  - Dashboards
+  - Data Visualization
+  properties:
+  - type: APIReference
+    url: https://apidocs.polymersearch.com/
+  - type: Authentication
+    url: authentication/polymer-authentication.yml
+  - type: Conventions
+    url: conventions/polymer-conventions.yml
+  - type: ErrorCatalog
+    url: errors/polymer-problem-types.yml
+  - type: DataModel
+    url: data-model/polymer-data-model.yml
+  - type: Conformance
+    url: conformance/polymer-conformance.yml
+  - type: MCPServer
+    url: mcp/polymer-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
 common:
+- type: DomainSecurity
+  url: security/polymer-domain-security.yml
 - type: Website
-  url: https://carbon.ai
+  url: https://www.polymersearch.com
+- type: DeveloperPortal
+  url: https://apidocs.polymersearch.com/
+- type: Documentation
+  url: https://apidocs.polymersearch.com/
+- type: APIReference
+  url: https://apidocs.polymersearch.com/
+- type: GettingStarted
+  url: https://www.polymersearch.com/guides
+- type: Pricing
+  url: https://www.polymersearch.com/pricing
+- type: Blog
+  url: https://www.polymersearch.com/blog
+- type: Support
+  url: https://polymersearch.notion.site/Help-Center-1b21de28d1504770bf79beaeb2610bc1
+- type: SignUp
+  url: https://v3.polymersearch.com/register
+- type: TermsOfService
+  url: https://www.polymersearch.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.polymersearch.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/PolymerSearch
+- type: StatusPage
+  url: https://status.polymersearch.com
+- type: Authentication
+  url: authentication/polymer-authentication.yml
+- type: Conventions
+  url: conventions/polymer-conventions.yml
+- type: ErrorCatalog
+  url: errors/polymer-problem-types.yml
+- type: DataModel
+  url: data-model/polymer-data-model.yml
+- type: Components
+  url: components/polymer-components.yml
+- type: Conformance
+  url: conformance/polymer-conformance.yml
+- type: Lifecycle
+  url: lifecycle/polymer-lifecycle.yml
+- type: ChangeLog
+  url: changelog/polymer-changelog.yml
+- type: MCPServer
+  url: mcp/polymer-mcp.yml
+- type: LLMsTxt
+  url: llms/polymer-llms.txt
+- type: WellKnown
+  url: well-known/polymer-well-known.yml

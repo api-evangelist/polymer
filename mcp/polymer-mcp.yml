@@ -1,0 +1,54 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: https://apidocs.polymersearch.com/
+api: Polymer Embedded Analytics API
+name: Polymer MCP Server (candidate)
+summary: >-
+  No official hosted or remote Model Context Protocol (MCP) server was found for
+  Polymer. This is a CANDIDATE tool list derived from the documented REST
+  operations, showing how a Polymer MCP server could expose the analytics API.
+  Not an official Polymer artifact.
+official: false
+server: null
+auth:
+  type: apiKey
+  transport: X-API-KEY header
+  see: authentication/polymer-authentication.yml
+tools:
+- name: list_workspaces
+  operation: GET /v1/workspaces
+  description: List workspaces available to the API key.
+- name: create_workspace
+  operation: POST /v1/workspace
+  description: Create a new workspace.
+- name: list_workspace_users
+  operation: GET /v1/workspace/users
+  description: List members of a workspace.
+- name: list_sources
+  operation: GET /v1/sources
+  description: List connected data sources.
+- name: list_datasets
+  operation: GET /v1/dataset
+  description: List datasets in a workspace.
+- name: upload_dataset
+  operation: POST /v1/dataset
+  description: Upload a dataset (CSV, JSON, Excel).
+- name: create_merged_dataset
+  operation: POST /v1/datasets/merged
+  description: Create a dataset merged from multiple sources.
+- name: list_boards
+  operation: GET /v1/boards
+  description: List boards (dashboards).
+- name: create_board
+  operation: POST /v1/board
+  description: Create a board composed of visualization blocks.
+- name: update_board
+  operation: PUT /v1/board/:board_id
+  description: Update an existing board.
+- name: get_task_status
+  operation: GET /v1/task/:id
+  description: Poll the status of an async task (import/sync).
+- name: mint_embed_token
+  operation: GET /v1/auth/token
+  description: Generate a scoped embed token to render a board to an end user.

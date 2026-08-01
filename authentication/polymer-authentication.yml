@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.polymersearch.com/
+api: Polymer Embedded Analytics API
+name: Polymer Authentication Profile
+summary: >-
+  The Polymer API authenticates every request with a workspace API key. The key
+  may be sent as an X-API-KEY request header or as an api_key query-string
+  parameter. Short-lived embed tokens are minted from the API to grant
+  permission-scoped, account-less access to end users of embedded dashboards.
+schemes:
+- id: api_key_header
+  type: apiKey
+  in: header
+  name: X-API-KEY
+  description: >-
+    Workspace API key sent in the X-API-KEY request header. This is the
+    recommended way to authenticate server-to-server calls.
+- id: api_key_query
+  type: apiKey
+  in: query
+  name: api_key
+  description: >-
+    Workspace API key supplied as the api_key query-string parameter,
+    equivalent to the X-API-KEY header.
+- id: embed_token
+  type: apiKey
+  in: query
+  name: ptoken
+  description: >-
+    Short-lived embed token minted via GET /v1/auth/token. Passed as the ptoken
+    query parameter on the embed URL (https://v3.polymersearch.com/b/{board_id}?ptoken={token})
+    to render a permission-scoped board to an end user who has no Polymer
+    account. Permission levels: board_read_only, board_edit, workspace_read_only,
+    workspace_edit, block_level_read_only.
+headers:
+  workspace_scope: >-
+    An optional workspace-id header targets a workspace other than the API key's
+    default workspace.
+notes:
+- No OAuth 2.0 / OpenID Connect flows are documented; access is API-key based.
+- No machine-readable OpenAPI security scheme is published; this profile was
+  derived by reading the developer documentation.

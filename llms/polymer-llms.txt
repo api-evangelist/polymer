@@ -1,0 +1,50 @@
+# Polymer
+
+> Polymer (Polymer Search) is an AI-driven embedded analytics and business
+> intelligence platform. Its REST API lets developers create workspaces,
+> connect data sources, upload and merge datasets, build boards from
+> visualization blocks, and embed permission-scoped dashboards into their own
+> applications. Backed by Sierra Ventures and 500 Global.
+
+- Website: https://www.polymersearch.com
+- API base URL: https://v3.polymersearch.com/api
+- Authentication: API key via X-API-KEY header or api_key query parameter; embed tokens for end-user access.
+- Rate limit: 100 requests/hour per API key (X-RateLimit-* headers).
+
+## Documentation
+
+- API Reference: https://apidocs.polymersearch.com/
+- Getting Started / Guides: https://www.polymersearch.com/guides
+- Pricing: https://www.polymersearch.com/pricing
+- Help Center: https://polymersearch.notion.site/Help-Center-1b21de28d1504770bf79beaeb2610bc1
+- Status: https://status.polymersearch.com
+- Blog: https://www.polymersearch.com/blog
+
+## API Surface
+
+- Workspaces: POST /v1/workspace, GET /v1/workspaces, PATCH /v1/workspace/:id, DELETE /v1/workspace/:id
+- Users: GET /v1/workspace/users, POST /v1/workspace/invite, DELETE /v1/workspace/user/:wuid
+- Sources: GET /v1/sources, DELETE /v1/sources/:sourceid (Snowflake, BigQuery connectors + sync)
+- Datasets: POST /v1/dataset, PUT /v1/dataset/:id, GET /v1/dataset, POST /v1/datasets/merged
+- Boards: POST /v1/board, PUT /v1/board/:board_id, GET /v1/boards, DELETE /v1/board/:board_id
+- Tasks: GET /v1/task/:id
+- Embed: GET /v1/auth/token (embed URL https://v3.polymersearch.com/b/{board_id}?ptoken={token})
+
+## Conventions
+
+- Pagination: page and per_page on list endpoints.
+- Errors: standard HTTP status codes (400/401/404/405/429/500/503).
+- Versioning: URI path (v1); current generation is the V3 APIs.
+- Block types: Header, Bar, Column, Scatter, Timeseries, Heatmap, Lineplot, Pie, Outlier, ROI, Pivot, KPI, Data Table, Gallery, Rich Text, Image, Map, Loom.
+
+## Repo Artifacts
+
+- Authentication: authentication/polymer-authentication.yml
+- Conventions: conventions/polymer-conventions.yml
+- Errors: errors/polymer-problem-types.yml
+- Data model: data-model/polymer-data-model.yml
+- Components: components/polymer-components.yml
+- Conformance: conformance/polymer-conformance.yml
+- Lifecycle: lifecycle/polymer-lifecycle.yml
+- Changelog: changelog/polymer-changelog.yml
+- MCP (candidate): mcp/polymer-mcp.yml

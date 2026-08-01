@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: derived
+source: https://apidocs.polymersearch.com/
+api: Polymer Embedded Analytics API
+name: Polymer Conformance Assertions
+summary: >-
+  Cross-cutting standards conformance for the Polymer embedded analytics API,
+  derived from the developer documentation. Polymer uses API-key auth, page-number
+  pagination, and standard HTTP status codes; it does not document OAuth2/OIDC,
+  RFC 9457 problem+json, idempotency keys, or vertical standards.
+assertions:
+- id: oauth2
+  conforms: false
+  evidence: Authentication is API-key based; no OAuth 2.0 flows are documented.
+- id: oidc
+  conforms: false
+  evidence: No OpenID Connect discovery or ID tokens documented.
+- id: pagination
+  conforms: true
+  evidence: All list endpoints accept page and per_page query parameters.
+- id: rate-limiting
+  conforms: true
+  evidence: 100 req/hour per key with X-RateLimit-Limit/Remaining/Reset headers and 429 responses.
+- id: idempotency
+  conforms: false
+  evidence: No idempotency key mechanism is documented.
+- id: rfc9457
+  conforms: false
+  evidence: Errors use plain HTTP status codes, not application/problem+json.
+- id: fhir
+  conforms: false
+  evidence: Not a healthcare API.
+- id: fapi
+  conforms: false
+  evidence: Not a financial-grade API; no OAuth2/FAPI.
+- id: scim
+  conforms: false
+  evidence: User management is via proprietary workspace member endpoints, not SCIM.
+- id: odata
+  conforms: false
+  evidence: Query surface is proprietary, not OData.
+- id: json-api
+  conforms: false
+  evidence: Responses are proprietary JSON, not JSON:API.

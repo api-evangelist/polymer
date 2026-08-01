@@ -1,0 +1,90 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.polymersearch.com/
+api: Polymer Embedded Analytics API
+name: Polymer API Changelog
+scheme: dated
+current_generation: V3
+first_release: '2021-07-21'
+latest_entry: '2024-09-23'
+docs: https://apidocs.polymersearch.com/
+summary: >-
+  Dated, additive changelog for the Polymer public API, captured verbatim from
+  the developer documentation. Entries are additions; no breaking removals are
+  documented.
+entries:
+- date: '2024-09-23'
+  breaking: false
+  highlights:
+  - Add support for CONTAINS, BEGINS_WITH, ENDS_WITH in global filters.
+- date: '2024-09-15'
+  breaking: false
+  highlights:
+  - Added support for header block, loom block and gallery block.
+  - Added support for merged datasets.
+- date: '2024-08-21'
+  breaking: false
+  highlights:
+  - Added support for background color on boards.
+  - Introduced control for board digest emails at the workspace level.
+  - Added control for PolyAI in read-only permissions.
+- date: '2024-07-07'
+  breaking: false
+  highlights:
+  - Added support for disabling the share button at the workspace level.
+  - Introduced support for Image and Map blocks.
+  - Enhanced board-level advanced sharing options.
+  - Added timezone support.
+- date: '2024-06-05'
+  breaking: false
+  highlights:
+  - Introduced support for slugs in board and workspace-level APIs.
+- date: '2024-05-05'
+  breaking: false
+  highlights:
+  - Added support for incremental updates.
+  - Introduced a skip email flag for workspace invites.
+- date: '2024-05-04'
+  breaking: false
+  highlights:
+  - Added support for custom DNS.
+- date: '2024-03-05'
+  breaking: false
+  highlights:
+  - 'Added support for embed permissions: board_read_only, board_edit, workspace_read_only, workspace_edit, block_level_read_only.'
+- date: '2024-01-05'
+  breaking: false
+  highlights:
+  - Added support for board CRUD APIs with basic chart types.
+- date: '2023-10-05'
+  breaking: false
+  highlights:
+  - Added support for V3 board embedding via token.
+- date: '2023-08-28'
+  breaking: false
+  highlights:
+  - Added support for workspace members CRUD.
+- date: '2023-07-15'
+  breaking: false
+  highlights:
+  - Added support for workspace CRUD.
+- date: '2023-01-06'
+  breaking: false
+  highlights:
+  - Released V3 APIs for dataset and board creation.
+- date: '2022-02-05'
+  breaking: false
+  highlights:
+  - Added support for JSON and Excel formats in the /v1/dataset API.
+- date: '2021-09-28'
+  breaking: false
+  highlights:
+  - Added support for force flag and Update Dataset API.
+- date: '2021-09-13'
+  breaking: false
+  highlights:
+  - Added support for starting row.
+- date: '2021-07-21'
+  breaking: false
+  highlights:
+  - Launched the first version of the Polymer public API.
