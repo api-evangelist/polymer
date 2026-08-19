@@ -4,11 +4,9 @@ status: candidate
 source: https://apidocs.polymersearch.com/
 api: Polymer Embedded Analytics API
 name: Polymer MCP Server (candidate)
-summary: >-
-  No official hosted or remote Model Context Protocol (MCP) server was found for
-  Polymer. This is a CANDIDATE tool list derived from the documented REST
-  operations, showing how a Polymer MCP server could expose the analytics API.
-  Not an official Polymer artifact.
+summary: No official hosted or remote Model Context Protocol (MCP) server was found for Polymer. This
+  is a CANDIDATE tool list derived from the documented REST operations, showing how a Polymer MCP server
+  could expose the analytics API. Not an official Polymer artifact.
 official: false
 server: null
 auth:
@@ -52,3 +50,9 @@ tools:
 - name: mint_embed_token
   operation: GET /v1/auth/token
   description: Generate a scoped embed token to render a board to an end user.
+deployment:
+  mode: none
+  verified: derived
+  tools: 12
+  checked: '2026-08-12'
+  source: catalog MCP census
