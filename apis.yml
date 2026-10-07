@@ -107,6 +107,8 @@ x-enrichment:
   artifacts_added: 12
   pass: local-v1
 common:
+- type: Plans
+  url: plans/polymer-plans-pricing.yml
 - type: DomainSecurity
   url: security/polymer-domain-security.yml
 - type: Website
