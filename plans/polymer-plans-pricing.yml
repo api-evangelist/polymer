@@ -1,0 +1,63 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.polymersearch.com/pricing
+sources:
+- https://www.polymersearch.com/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: 'Page contains several duplicated/stale pricing tables (e.g. $20/$40 individual license, $50/$100/$250
+  tiers); plans captured from the most detailed Basic/Starter/Pro/Teams/Enterprise table. Yearly equivalents:
+  $5/$25/$50/$125 /mo.'
+plan_count: 5
+currency: USD
+plans:
+- name: Basic
+  price_text: $10 /mo billed monthly
+  price: 10
+  currency: USD
+  period: month
+  unit: editor
+  included_quota: 1 Editor; File Uploads and Google Sheets; Manual Data Syncing; No PolyAI Chat Responses
+- name: Starter
+  price_text: $50 /mo billed monthly
+  price: 50
+  currency: USD
+  period: month
+  unit: editor
+  included_quota: 1 Editor; All Data Connectors (Shopify +$3/mo per store); Automatic Daily Data Syncing;
+    10 PolymerAI Chat Responses
+  overage: Shopify +$3/mo per store
+- name: Pro
+  price_text: $100 /mo billed monthly
+  price: 100
+  currency: USD
+  period: month
+  unit: editor
+  included_quota: 1 Editor; 5 Accounts / Data Connector; Hourly Syncing; 20 PolymerAI Chat Responses
+  overage: Shopify +$3/mo per store
+- name: Teams
+  price_text: $250 /mo billed monthly
+  price: 250
+  currency: USD
+  period: month
+  unit: 3 editors
+  included_quota: 3 Editors; 15 Accounts / Data Connector; Hourly Syncing; 30 PolymerAI Chat Responses
+  overage: Shopify +$3/mo per store
+- name: Enterprise
+  price_text: Contact Sales
+  period: none
+  included_quota: API Access, Unlimited AI Chat, Real-Time Data Syncing, larger file limits & other extras
+rate_limit_statements:
+- 10 PolymerAI Chat Responses
+- 20 PolymerAI Chat Responses
+- 30 PolymerAI Chat Responses
