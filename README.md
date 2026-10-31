@@ -64,6 +64,107 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Polymer is a company surfaced as a portfolio company of 500-global, sierra-ventures and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Polymer (Polymer Search) is an AI-driven embedded analytics and business intelligence platform that lets teams and product developers turn raw spreadsheet, database, and SaaS data into interactive dashboards, charts, and visualizations without a data analyst. Its REST API lets developers create workspaces, connect data sources (Snowflake, BigQuery, CSV/JSON uploads), build boards composed of visualization blocks, and embed white-labeled, permission-scoped dashboards directly into their own applications with a few lines of code. Authentication is via API key, with short-lived embed tokens for end-user access. Polymer is backed by Sierra Ventures and 500 Global.
 
-Backed by: 500-global, sierra-ventures — https://carbon.ai
+**Areas:** Company · Analytics · Business Intelligence · Data Visualization · Embedded Analytics · Dashboards · Data · Artificial Intelligence
+
+## Polymer on APIs.io
+
+Everything profiled for Polymer is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/polymer/](https://apis.io/providers/polymer/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Polymer Embedded Analytics API](https://apis.io/apis/polymer/polymer-embedded-analytics-api/) — REST API for the Polymer embedded analytics platform. Manage workspaces and users, connect and sync data sources (Snowflake, BigQuery, uploads), create and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Polymer MCP Server (candidate)](https://apis.io/servers/polymer/polymer-mcp-server-candidate/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Polymer Authentication](https://apis.io/security/polymer/polymer-authentication/)
+- [Polymer Domain Security](https://apis.io/security/polymer/polymer-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Polymer Plans Pricing](https://apis.io/plans/polymer/polymer-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.polymersearch.com)
+- [Documentation](https://apidocs.polymersearch.com/)
+- [Getting started](https://www.polymersearch.com/guides)
+- [API reference](https://apidocs.polymersearch.com/)
+- [Pricing](https://www.polymersearch.com/pricing)
+- [Sign up](https://v3.polymersearch.com/register)
+- [Support](https://polymersearch.notion.site/Help-Center-1b21de28d1504770bf79beaeb2610bc1)
+- [Blog](https://www.polymersearch.com/blog)
+- [Terms of service](https://www.polymersearch.com/terms-of-service)
+- [Privacy policy](https://www.polymersearch.com/privacy-policy)
+- [GitHub](https://github.com/PolymerSearch)
+- [Status](https://status.polymersearch.com)
+
+## API Evangelist rating
+
+**Kin Score 36.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 63.2 |
+
+**Agent readiness 3.2** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/polymer/](https://apis.io/providers/polymer/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Polymer: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/polymer/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
